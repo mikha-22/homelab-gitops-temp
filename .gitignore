@@ -1,0 +1,12 @@
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# Helm generated files
+charts/
+Chart.lock
