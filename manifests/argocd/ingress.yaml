@@ -5,7 +5,8 @@ metadata:
   name: argocd-server-ingress
   namespace: argocd
   annotations:
-    external-dns.alpha.kubernetes.io/target: "4ef0531d-02a9-445d-b3da-84cadcd2aabe.cfargotunnel.com"
+    # <--- THIS IS THE UPDATED LINE
+    external-dns.alpha.kubernetes.io/target: "f292abbd-ec9f-49a8-a453-e016768bea56.cfargotunnel.com"
     external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     # CRITICAL: Annotations for Cloudflare tunnel + Traefik
     traefik.ingress.kubernetes.io/backend-protocol: "http"
