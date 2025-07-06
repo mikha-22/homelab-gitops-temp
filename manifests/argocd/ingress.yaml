@@ -5,8 +5,8 @@ metadata:
   name: argocd-server-ingress
   namespace: argocd
   annotations:
-    # <--- THIS IS THE UPDATED LINE
-    external-dns.alpha.kubernetes.io/target: "f292abbd-ec9f-49a8-a453-e016768bea56.cfargotunnel.com"
+    # --- THIS IS THE CORRECTED LINE ---
+    external-dns.alpha.kubernetes.io/target: "bf933a89-92ea-45ae-bc06-3fff5d346119.cfargotunnel.com"
     external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     # CRITICAL: Annotations for Cloudflare tunnel + Traefik
     traefik.ingress.kubernetes.io/backend-protocol: "http"
@@ -21,6 +21,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: argocd-helm-server  # Note: Will be argocd-helm-server (app name + -server)
+            name: argocd-helm-server
             port:
               number: 80
